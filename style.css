@@ -1,0 +1,356 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --lighting-color :#0089b7;
+    --dark-color:#003d62;
+    --darker-color:#003251;
+    --secondary-color:#fff700;
+}
+
+* {
+
+margin: 0;
+padding: 0;
+ }
+
+
+ html {
+    font-size: 62.5%;
+
+ }
+ body ,html {
+    font-family: "Poppins", system-ui;
+    font-weight: 300 ;
+    line-height: 1.4;
+    scroll-behavior: smooth;
+    color: white;
+
+
+ }
+ body {
+    font-size: 1.4rem;
+ }
+
+ .container {
+
+    max-width: 1300px;
+    margin: 0 auto;
+    /* padding: 0 2rem; */
+ }
+
+ a{
+    text-decoration: none;
+    color: white;
+ }
+
+
+ header {
+   background: var(--lighting-color);
+
+ }
+
+ .hero_image img{
+    max-height:500px ;
+    max-width: 500px;
+    border-radius: 200px;
+    
+ }
+
+ nav {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    /* height: 5rem; */
+    padding: 1rem;
+ }
+ /* That's how the bullets of list are fixed and gaps are done between flex items */
+ 
+ nav ul {
+ display: flex;
+ list-style: none;
+ gap: 2rem;
+
+ }
+
+ 
+
+.logo {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+ul li{
+    font-size: 1.8rem;
+    cursor: pointer;
+
+}
+/* Lame way of hover effect */
+/* 
+li:hover {
+  text-decoration: underline;
+
+} */
+
+/* Cool way of Hover effect */
+
+li:hover {
+    /* See a New Thing border-bottom */
+  border-bottom: 0.3rem solid var(--secondary-color);
+  transition: 0.3s ease-in-out;
+}
+
+#hero {
+    background: var(--dark-color);
+    padding: 4rem 0;
+    border-bottom:  4px solid var(--lighting-color);
+}
+
+#hero .container {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.hero_content {
+    /* TO Center the items  */
+    display: grid;
+    place-items: center;
+}
+
+#hero h1{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hi_text {
+ font-size: 6rem;
+ color: var(--secondary-color);
+ font-weight: bold;
+}
+
+.name_text {
+ font-size: 5rem;
+
+}
+
+#hero h2 {
+ font-size: 4rem;
+ font-weight: bold;
+
+ /* Now to give the Typing Effect */
+ overflow: hidden;
+ border-right: 0.15em solid orange;
+ white-space:nowrap;
+ margin:0 auto;
+ animation: typing 5s steps(40,end), blink-caret 0.75s step-end infinite;
+
+}
+
+
+@keyframes typing{
+from  {
+    width:0;
+
+}
+
+to {
+
+    width:100%;
+}
+}
+@keyframes blink-caret{
+    from ,
+    to {
+        border-color: transparent;
+    
+    }
+    
+    50%{
+        border-color:orange;
+       
+    }
+
+
+
+
+}
+
+#project {
+
+    background: var(--darker-color);
+}
+
+#project h2 {
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 6rem;
+    color: white;
+}
+
+.project_container {
+    display: grid;
+    /* Now a magical code to make responsive grid */
+    grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+    gap: 2rem;
+    
+}
+
+.grid_item {
+
+    display: grid;
+    place-items: center;
+}
+
+.card {
+
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    border-radius:0.5rem;
+     overflow: hidden;
+     /* ROunded corner  */
+
+
+}
+
+.card:hover {
+ transform: scale(1.05);
+ transition:1s ease-in-out;
+}
+
+.card:hover img{
+
+    transform: scale(1.05);
+ transition:1s ease-in-out;
+ opacity: 0.8;
+}
+
+.card:hover .card_content{
+
+
+    background: white;
+    color: black;
+    /* Fantanstic effect */
+    transform: translateY(0px);
+}
+.card_content {
+
+ padding: 2rem;
+ position: relative;
+ top: -6.5rem;
+ margin-bottom: -6.5rem;
+
+ /* Very Nice Adjustments for any further projects */
+ transition: 0.5s ease-in-out;
+ transform: translateY(100px);
+
+}
+
+.card_content h3{
+    text-align: center;
+}
+
+
+/* Contact Section */
+
+#contact {
+
+    background: var(--dark-color);
+
+}
+
+#contact h2 {
+
+    font-size: 6rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+#contact .container{
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  justify-content: center;
+}
+
+.top_contact {
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(80px,1fr));
+    max-width: 800px;
+    gap: 1rem;
+}
+
+.contact_way {
+    display:flex;
+    align-items: center;
+    gap: 1rem;
+}
+/* setting icons */
+.contact_way i{
+  font-size: 3rem;
+
+}
+.contact_way h3{
+    font-size: 3rem;
+    font-weight: bold;
+  
+  }
+  
+  .bottom_contact {
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(80px,1fr));
+    max-width: 800px;
+    gap: 1rem;
+}
+
+footer {
+    background: var(--darker-color);
+    padding: 2rem;
+    color:white;
+    font-size: 1.6rem;
+    text-align: center;
+}
+/* for tablets */
+@media (max-width: 786px) {
+    html {
+        font-size: 40%;
+    }
+    #hero .container{
+        flex-direction: column;
+
+
+    }
+    .hero_image {
+        display: grid;
+        place-items:center;
+    }
+
+    #contact .container {
+        height: 70vh;
+    }
+    
+}
+/* for mobiles */
+@media (max-width: 500px) {
+    html {
+        font-size: 32%;
+    }
+    #hero .container{
+        flex-direction: column;
+
+
+    }
+    .hero_image {
+        display: grid;
+        place-items:center;
+    }
+
+    #contact .container {
+        height: 50vh;
+    }
+    
+}
