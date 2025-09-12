@@ -205,10 +205,13 @@ to {
 .card {
 
     width: 320px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     border-radius:0.5rem;
      overflow: hidden;
+     object-fit: contain;
+
      /* ROunded corner  */
 
 
